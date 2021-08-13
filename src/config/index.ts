@@ -5,4 +5,6 @@ export const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-export default { client };
+const defaultExport = { client };
+
+export default defaultExport;

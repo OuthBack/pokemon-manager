@@ -6,7 +6,6 @@ import {
   useEffect,
   useState,
 } from "react";
-import { client } from "../config";
 
 export interface Pokemon {
   image: string;
@@ -83,7 +82,7 @@ export const PokemonProvider: React.FC = ({ children }) => {
               : true)()
       ),
 
-    [filtredPokemons, pokemons]
+    [pokemons, max, min]
   );
 
   useEffect(() => {
@@ -92,7 +91,7 @@ export const PokemonProvider: React.FC = ({ children }) => {
 
   useEffect(() => {
     setFiltredPokemons(filterPokemons(selectedTypes));
-  }, [min, max, selectedTypesLength]);
+  }, [min, max, selectedTypesLength, filterPokemons, selectedTypes]);
 
   useEffect(() => {
     setFiltredPokemons(pokemons);
@@ -128,4 +127,6 @@ export function usePokemon(): PokemonContextData {
   return context;
 }
 
-export default { PokemonProvider, usePokemon };
+const defaultExport = { PokemonProvider, usePokemon };
+
+export default defaultExport;

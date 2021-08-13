@@ -1,4 +1,4 @@
-import React, {
+import {
   ChangeEvent,
   FC,
   useCallback,
@@ -24,7 +24,7 @@ const MultiRangeSlider: FC<MultiRangeSliderProps> = ({
   const minValRef = useRef(min);
   const maxValRef = useRef(max);
   const range = useRef<HTMLDivElement>(null);
-  const { filterPokemons, setMin, setMax } = usePokemon();
+  const { setMin, setMax } = usePokemon();
 
   // Convert to percentage
   const getPercent = useCallback(

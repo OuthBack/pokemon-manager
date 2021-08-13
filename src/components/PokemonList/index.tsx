@@ -1,7 +1,4 @@
-import { client } from "../../config";
-import React, { Suspense } from "react";
 import { usePokemon } from "../../contexts/pokemon";
-import { MobileProps } from "../../pages";
 import { Container, List, PokemonCardSkeleton } from "./styles";
 import PokemonCard from "../PokemonCard";
 export default function PokemonList() {
