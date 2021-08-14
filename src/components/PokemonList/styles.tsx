@@ -22,7 +22,6 @@ export const Container = styled.main`
   @media screen and (min-width: 1080px) {
     height: auto;
     margin-top: 50px;
-
     min-width: 596px;
     flex: 1 1 0;
     padding: 40px;
