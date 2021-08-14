@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const Container = styled.main`
   height: 100%;
-  width: 100%;
-  padding: 40px;
+  padding: 20px;
+  margin-top: 20px;
   transition: ease-in-out 0.5s;
   background-color: ${(props) => props.theme.colors.grey100};
   border-radius: 50px 50px 0px 0px;
@@ -22,11 +22,13 @@ export const Container = styled.main`
   @media screen and (min-width: 1080px) {
     height: auto;
     margin-top: 50px;
-    width: 596px;
+
+    min-width: 596px;
     flex: 1 1 0;
+    padding: 40px;
   }
 
-  @media screen and (min-width: 1080px) {
+  @media screen and (min-width: 1170px) {
     h1.title {
       font-size: 35px;
     }
@@ -38,16 +40,24 @@ export const List = styled.section`
   display: grid;
   grid-gap: 15px;
   width: 100%;
-  max-height: calc(100vh - 257px);
+  max-height: 100%;
   overflow: auto;
-  padding-right: 20px;
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
 
   @media screen and (min-width: 768px) {
     grid-template-columns: 1fr 1fr;
   }
 
   @media screen and (min-width: 1080px) {
-    grid-template-columns: 1fr;
+    max-height: calc(100vh - 257px);
+    padding-right: 20px;
+
+    ::-webkit-scrollbar {
+      display: block;
+    }
   }
 
   @media screen and (min-width: 1280px) {

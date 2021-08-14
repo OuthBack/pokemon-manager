@@ -24,6 +24,7 @@ export const Container = styled.aside`
   }
 
   @media screen and (min-width: 1080px) {
+    border-radius: 50px 0px 0px 50px;
     margin-top: 50px;
     position: static;
     background-color: ${(props) => props.theme.colors.grey100} !important;
