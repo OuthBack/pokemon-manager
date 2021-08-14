@@ -13,12 +13,14 @@ import { MobileProps } from "../../pages";
 export default function Nav({ isShowing, setShowItem }: MobileProps) {
   return (
     <Container className={isShowing ? "active" : ""}>
-      <XIcon
-        className="x-icon"
-        onClick={() => setShowItem(2)}
-        width={28}
-        height={26}
-      />
+      {setShowItem && (
+        <XIcon
+          className="x-icon"
+          onClick={() => setShowItem(2)}
+          width={28}
+          height={26}
+        />
+      )}
       <Brand />
       <Rows>
         <NavRow Icon={HamburguerIcon} title="Lista" isSelected={true} />

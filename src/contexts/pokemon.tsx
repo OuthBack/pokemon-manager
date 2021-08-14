@@ -12,7 +12,12 @@ export interface Pokemon {
   name: string;
   types: string[];
   maxCP: number;
-  number: number;
+  number: string;
+}
+
+export interface PokemonProviderProps {
+  children?: React.ReactNode;
+  pokemon: Pokemon[];
 }
 
 interface PokemonContextData {
@@ -27,6 +32,27 @@ interface PokemonContextData {
   setSelectedTypes: (types: string[]) => void;
   setSelectedTypesLength: (number: number) => void;
 }
+
+export const types = [
+  "Normal",
+  "Fire",
+  "Fighting",
+  "Water",
+  "Flying",
+  "Grass",
+  "Poison",
+  "Electric",
+  "Ground",
+  "Psychic",
+  "Rock",
+  "Ice",
+  "Bug",
+  "Dragon",
+  "Ghost",
+  "Dark",
+  "Steel",
+  "Fairy",
+];
 
 const PokemonContext = createContext<PokemonContextData>(
   {} as PokemonContextData
@@ -45,27 +71,23 @@ const getPokemonsQuery = gql`
   }
 `;
 
-export const PokemonProvider: React.FC = ({ children }) => {
-  const [pokemons, setPokemons] = useState<Pokemon[]>([]);
+export const PokemonProvider = ({
+  children,
+  pokemon,
+}: PokemonProviderProps) => {
+  const [pokemons, setPokemons] = useState<Pokemon[]>(pokemon);
   const [filtredPokemons, setFiltredPokemons] = useState<Pokemon[]>([]);
   const [minPokemonCP, setMinPokemonCP] = useState(0);
   const [maxPokemonCP, setMaxPokemonCP] = useState(0);
   const { loading, error, data } = useQuery(getPokemonsQuery);
   const [min, setMin] = useState(0);
   const [max, setMax] = useState(9999);
-  const [selectedTypes, setSelectedTypes] = useState<string[]>([]);
+  const [selectedTypes, setSelectedTypes] = useState<string[]>(types);
   const [selectedTypesLength, setSelectedTypesLength] = useState(0);
 
   const getPokemons = useCallback(() => {
     if (!loading && !error) {
       setPokemons(data.pokemons);
-      const cpArray = data.pokemons.map((pokemon: Pokemon) => pokemon.maxCP);
-      const maxCP = Math.max(...cpArray);
-      const minCP = Math.min(...cpArray);
-      setMaxPokemonCP(maxCP);
-      setMinPokemonCP(minCP);
-      setMax(maxCP);
-      setMin(minCP);
     }
   }, [data, error, loading]);
 
@@ -75,19 +97,23 @@ export const PokemonProvider: React.FC = ({ children }) => {
         (pokemon) =>
           min <= pokemon.maxCP &&
           pokemon.maxCP <= max &&
-          (() =>
-            selectedTypes.length > 0
-              ? pokemon.types.filter((type) => selectedTypes.includes(type))
-                  .length > 0
-              : true)()
+          pokemon.types.filter((type) => selectedTypes.includes(type)).length >
+            0
       ),
 
     [pokemons, max, min]
   );
 
   useEffect(() => {
-    getPokemons();
-  }, [getPokemons]);
+    if (pokemon.length === 0) getPokemons();
+    const cpArray = pokemons.map((pokemon: Pokemon) => pokemon.maxCP);
+    const maxCP = Math.max(...cpArray);
+    const minCP = Math.min(...cpArray);
+    setMaxPokemonCP(maxCP);
+    setMinPokemonCP(minCP);
+    setMax(maxCP);
+    setMin(minCP);
+  }, [getPokemons, pokemon, pokemons]);
 
   useEffect(() => {
     setFiltredPokemons(filterPokemons(selectedTypes));

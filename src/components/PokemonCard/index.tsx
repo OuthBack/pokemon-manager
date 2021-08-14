@@ -27,7 +27,7 @@ export default function PokemonCard({
 
           <p data-testid="pokemon-type">{types?.join(", ")}</p>
           <CPContainer maxCP={maxCP}>
-            <span>{maxCP}</span>
+            <span data-testid="pokemon-cp">{maxCP}</span>
           </CPContainer>
         </TextContainer>
       </InnerContainer>

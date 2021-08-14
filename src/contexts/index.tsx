@@ -1,13 +1,13 @@
 import { ApolloProvider } from "@apollo/client";
 import { client } from "../config";
-import { PokemonProvider } from "./pokemon";
+import { PokemonProvider, PokemonProviderProps } from "./pokemon";
 import { ThemeProvider } from "styled-components";
 import light from "../styles/themes/default";
 
-const AppProvider: React.FC = ({ children }) => {
+const AppProvider = ({ children, pokemon }: PokemonProviderProps) => {
   return (
     <ApolloProvider client={client}>
-      <PokemonProvider>
+      <PokemonProvider pokemon={pokemon}>
         <ThemeProvider theme={light}>{children}</ThemeProvider>
       </PokemonProvider>
     </ApolloProvider>

@@ -12,12 +12,14 @@ import { ReactComponent as XIcon } from "../../assets/icons/x-icon.svg";
 export default function Filter({ isShowing, setShowItem }: MobileProps) {
   return (
     <Container className={isShowing ? "active" : ""}>
-      <XIcon
-        className="x-icon"
-        onClick={() => setShowItem(2)}
-        width={28}
-        height={26}
-      />
+      {setShowItem && (
+        <XIcon
+          className="x-icon"
+          onClick={() => setShowItem(2)}
+          width={28}
+          height={26}
+        />
+      )}
       <InnerContainer>
         <h1 className="title">Filtro</h1>
         <FilterSliderContainer>

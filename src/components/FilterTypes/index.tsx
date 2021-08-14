@@ -1,29 +1,9 @@
-import { usePokemon } from "../../contexts/pokemon";
+import { types, usePokemon } from "../../contexts/pokemon";
 import { Container, Type, TypesList } from "./styled";
 
 export default function FilterTypes() {
   const { selectedTypes, setSelectedTypes, setSelectedTypesLength } =
     usePokemon();
-  const types = [
-    "Normal",
-    "Fire",
-    "Fighting",
-    "Water",
-    "Flying",
-    "Grass",
-    "Poison",
-    "Electric",
-    "Ground",
-    "Psychic",
-    "Rock",
-    "Ice",
-    "Bug",
-    "Dragon",
-    "Ghost",
-    "Dark",
-    "Steel",
-    "Fairy",
-  ];
 
   return (
     <Container>
@@ -35,7 +15,8 @@ export default function FilterTypes() {
               type="checkbox"
               id={`${type}-checkbox`}
               name={`${type}-checkbox`}
-              data-testid={`${type}-filter-checkbox`}
+              alt={`${type}-checkbox`}
+              defaultChecked={true}
               onChange={(event) => {
                 if (event.target.checked) {
                   selectedTypes.push(type);

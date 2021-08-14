@@ -46,7 +46,6 @@ export const Type = styled.div`
   }
   label {
     cursor: pointer;
-    font-weight: 500;
     font-size: 16px;
     line-height: 1.35;
     color: ${(props) => props.theme.font.colors.grey700};
