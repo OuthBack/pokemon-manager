@@ -1,5 +1,22 @@
 import styled from "styled-components";
 
+interface GetColorProps {
+  cp: number;
+  color: { red: string; purple: string; yellow: string; blue: string };
+}
+
+const getColor = ({ cp, color }: GetColorProps) => {
+  if (cp < 500) {
+    return color.red;
+  } else if (cp < 1000) {
+    return color.purple;
+  } else if (cp < 1500) {
+    return color.yellow;
+  } else {
+    return color.blue;
+  }
+};
+
 export const Container = styled.div`
   width: 100%;
   height: 80px;
@@ -53,17 +70,16 @@ export const CPContainer = styled.div<{ maxCP: number }>`
   width: 54px;
   height: 19px;
   margin-top: 7px;
-  background-color: ${(props) => {
-    if (props.maxCP < 500) {
-      return props.theme.colors.red300;
-    } else if (props.maxCP < 1000) {
-      return props.theme.colors.purple400;
-    } else if (props.maxCP < 1500) {
-      return props.theme.colors.yellow500;
-    } else {
-      return props.theme.colors.blue200;
-    }
-  }};
+  background-color: ${(props) =>
+    getColor({
+      cp: props.maxCP,
+      color: {
+        red: props.theme.colors.red300,
+        purple: props.theme.colors.purple400,
+        yellow: props.theme.colors.yellow500,
+        blue: props.theme.colors.blue200,
+      },
+    })};
   display: flex;
   align-items: center;
   justify-content: center;
