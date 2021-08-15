@@ -164,4 +164,4 @@ Link do Projeto: [https://github.com/OuthBack/pokemon-manager](https://github.co
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
 [product-screenshot]: .github/screenshot.png
-[site-status]: https://img.shields.io/website/https://pokemon-manager.vercel.app/path/to/page.html.svg.
+[site-status]: https://img.shields.io/website/https/pokemon-manager.vercel.app/path/to/page.html.svg.
