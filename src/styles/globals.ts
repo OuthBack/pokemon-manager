@@ -41,6 +41,7 @@ export default createGlobalStyle`
     height: 100vh;
     overflow-x: hidden;
     overflow-y: hidden;
+    position: relative;
     @media screen and (min-width: 1024px) {
       overflow-y: auto;
     }

@@ -8,8 +8,9 @@ import {
   TypesContainerFilter,
 } from "./styles";
 import { ReactComponent as XIcon } from "../../assets/icons/x-icon.svg";
+import { memo } from "react";
 
-export default function Filter({ isShowing, setShowItem }: MobileProps) {
+const Filter = ({ isShowing, setShowItem }: MobileProps) => {
   return (
     <Container className={isShowing ? "active" : ""}>
       {setShowItem && (
@@ -31,4 +32,6 @@ export default function Filter({ isShowing, setShowItem }: MobileProps) {
       </InnerContainer>
     </Container>
   );
-}
+};
+
+export default memo(Filter);

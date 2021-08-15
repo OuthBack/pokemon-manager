@@ -7,6 +7,10 @@ export const Container = styled.div`
   cursor: pointer;
 
   @media screen and (min-width: 1080px) {
+    width: 178px;
+  }
+
+  @media screen and (min-width: 1366px) {
     width: 223px;
   }
 

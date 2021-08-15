@@ -22,9 +22,13 @@ export const Container = styled.main`
   @media screen and (min-width: 1080px) {
     height: auto;
     margin-top: 50px;
-    min-width: 596px;
+
     flex: 1 1 0;
     padding: 40px;
+  }
+
+  @media screen and (min-width: 1366px) {
+    padding: 20px;
   }
 
   @media screen and (min-width: 1170px) {
@@ -65,6 +69,9 @@ export const List = styled.section`
 
   @media screen and (min-width: 1600px) {
     grid-template-columns: 1fr 1fr 1fr;
+  }
+  @media screen and (min-width: 2300px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 `;
 

@@ -7,6 +7,7 @@ import {
   useRef,
 } from "react";
 import { usePokemon } from "../../contexts/pokemon";
+import { useDebounce } from "@react-hook/debounce";
 
 interface MultiRangeSliderProps {
   min: number;
@@ -25,6 +26,14 @@ const MultiRangeSlider: FC<MultiRangeSliderProps> = ({
   const maxValRef = useRef(max);
   const range = useRef<HTMLDivElement>(null);
   const { setMin, setMax } = usePokemon();
+  const [debouncededMinValue, setDebouncededMinValue] = useDebounce(min, 100);
+  const [debouncededMaxValue, setDebouncededMaxValue] = useDebounce(max, 100);
+
+  // Debounce
+  useEffect(() => {
+    setMin(debouncededMinValue);
+    setMax(debouncededMaxValue);
+  }, [debouncededMinValue, debouncededMaxValue, setMax, setMin]);
 
   // Convert to percentage
   const getPercent = useCallback(
@@ -69,7 +78,8 @@ const MultiRangeSlider: FC<MultiRangeSliderProps> = ({
         onChange={(event: ChangeEvent<HTMLInputElement>) => {
           const value = Math.min(Number(event.target.value), maxVal - 1);
           setMinVal(value);
-          setMin(parseInt(event.target.value));
+          // setMin(parseInt(event.target.value));
+          setDebouncededMinValue(value);
           minValRef.current = value;
         }}
         className="thumb thumb--left"
@@ -84,7 +94,8 @@ const MultiRangeSlider: FC<MultiRangeSliderProps> = ({
         onChange={(event: ChangeEvent<HTMLInputElement>) => {
           const value = Math.max(Number(event.target.value), minVal + 1);
           setMaxVal(value);
-          setMax(parseInt(event.target.value));
+          //setMax(parseInt(event.target.value));
+          setDebouncededMaxValue(value);
           maxValRef.current = value;
         }}
         className="thumb thumb--right"

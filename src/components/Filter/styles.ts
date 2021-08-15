@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Container = styled.aside`
   width: 100%;
   background-color: ${(props) => props.theme.colors.grey100};
-  border-radius: 50px 0px 0px 50px;
   transition: ease-in-out 0.5s;
   position: absolute;
   z-index: 2;
@@ -25,17 +24,22 @@ export const Container = styled.aside`
 
   @media screen and (min-width: 1080px) {
     border-radius: 50px 0px 0px 50px;
-    margin-top: 50px;
     position: static;
     background-color: ${(props) => props.theme.colors.grey100} !important;
-    margin-top: 141px;
-    margin-left: 58px;
+    margin-top: 100px;
+    margin-left: 28px;
     width: 429px;
-    height: 556px;
+    height: fit-content;
 
     svg.x-icon {
       display: none;
     }
+  }
+
+  @media screen and (min-width: 1366px) {
+    height: 556px;
+    margin-top: 141px;
+    margin-left: 58px;
   }
 `;
 
@@ -48,15 +52,15 @@ export const InnerContainer = styled.div`
     font-size: clamp(23px, 2.2vw, 35px);
   }
 
+  @media screen and (min-width: 1080px) {
+    padding: 40px;
+    margin-top: 0px;
+  }
+
   @media screen and (min-width: 1368px) {
     h1.title {
       font-size: 35px;
     }
-  }
-
-  @media screen and (min-width: 1080px) {
-    padding: 40px;
-    margin-top: 0px;
   }
 `;
 

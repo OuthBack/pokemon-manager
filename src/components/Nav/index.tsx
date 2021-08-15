@@ -9,8 +9,9 @@ import { ReactComponent as XIcon } from "../../assets/icons/x-icon.svg";
 import NavRow from "../NavRow";
 import { Version } from "../Version";
 import { MobileProps } from "../../pages";
+import { memo } from "react";
 
-export default function Nav({ isShowing, setShowItem }: MobileProps) {
+const Nav = ({ isShowing, setShowItem }: MobileProps) => {
   return (
     <Container className={isShowing ? "active" : ""}>
       {setShowItem && (
@@ -34,4 +35,6 @@ export default function Nav({ isShowing, setShowItem }: MobileProps) {
       </Rows>
     </Container>
   );
-}
+};
+
+export default memo(Nav);

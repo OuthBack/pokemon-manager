@@ -9,11 +9,29 @@ export const Container = styled.div`
 `;
 
 export const TypesList = styled.div`
+  width: 100%;
   margin-top: 9px;
   display: grid;
-  grid-column-gap: 21px;
+  grid-column-gap: 16px;
   grid-row-gap: 10px;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+
+  @media screen and (min-width: 425px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  @media screen and (min-width: 1080px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (min-width: 1366px) {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 21px;
+  }
 `;
 
 export const Type = styled.div`

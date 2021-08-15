@@ -41,7 +41,7 @@ export const TextContainer = styled.div`
   width: 100%;
   margin-left: 15px;
   h5 {
-    font-size: 16px;
+    font-size: 13px;
     color: ${(props) => props.theme.font.colors.grey700};
     font-weight: bold;
     line-height: 1.35;
@@ -51,6 +51,12 @@ export const TextContainer = styled.div`
     font-size: 12px;
     line-height: 1.35;
     font-weight: 500;
+  }
+
+  @media screen and (min-width: 1366px) {
+    h5 {
+      font-size: 16px;
+    }
   }
 `;
 

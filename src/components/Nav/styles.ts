@@ -43,11 +43,15 @@ export const Container = styled.nav<{ isShowing?: boolean }>`
     display: block;
     position: static;
     width: auto;
-    padding: 117px 30px 0 30px;
+    padding: 117px 15px 0 15px;
 
     svg.x-icon {
       display: none;
     }
+  }
+
+  @media screen and (min-width: 1366px) {
+    padding: 117px 30px 0 30px;
   }
 `;
 
@@ -59,10 +63,14 @@ export const Rows = styled.div`
 
   @media screen and (min-width: 768px) {
     margin-top: 64px;
-    grid-gap: 33px;
+    grid-gap: 22px;
   }
 
   @media screen and (min-width: 1080px) {
     margin-left: 7px;
+  }
+
+  @media screen and (min-width: 1366px) {
+    grid-gap: 33px;
   }
 `;

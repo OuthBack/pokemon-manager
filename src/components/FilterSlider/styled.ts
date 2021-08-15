@@ -6,18 +6,19 @@ export const Container = styled.div`
   }
 `;
 
-export const MultiRangeContainer = styled.div<{ width: number }>`
+export const MultiRangeContainer = styled.div<{ desktopWidth: number }>`
   margin-top: 12px;
 
   .container {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
   }
 
   .slider {
     position: relative;
-    width: ${(props) => props.width}px;
+    width: calc(100% - 20px);
   }
 
   .slider__track,
@@ -79,7 +80,7 @@ export const MultiRangeContainer = styled.div<{ width: number }>`
     pointer-events: none;
     position: absolute;
     height: 0;
-    width: ${(props) => props.width}px;
+    width: calc(100% - 20px);
     outline: none;
   }
 

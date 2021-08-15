@@ -1,13 +1,14 @@
 import { Container } from "./styles";
 import { ReactComponent as HamburguerIcon } from "../../assets/icons/hamburguer.svg";
 import { ReactComponent as FilterIcon } from "../../assets/icons/filter.svg";
+import { memo } from "react";
 
 interface Props {
   showItem: number;
   setShowItem: React.Dispatch<React.SetStateAction<number>>;
 }
 
-export default function MobileHeader({ showItem, setShowItem }: Props) {
+const MobileHeader = ({ showItem, setShowItem }: Props) => {
   return (
     <Container>
       <HamburguerIcon
@@ -28,4 +29,6 @@ export default function MobileHeader({ showItem, setShowItem }: Props) {
       />
     </Container>
   );
-}
+};
+
+export default memo(MobileHeader);

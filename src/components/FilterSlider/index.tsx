@@ -14,7 +14,7 @@ export default function FilterSlider() {
   return (
     <Container>
       <span>maxCP</span>
-      <MultiRangeContainer width={349}>
+      <MultiRangeContainer desktopWidth={349}>
         {maxPokemonCP > 0 && minPokemonCP > 0 ? (
           <MultiRangeSlider
             min={minPokemonCP}
