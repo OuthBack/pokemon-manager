@@ -49,7 +49,7 @@
 
 <!-- TABLE OF CONTENTS -->
 <details open="open">
-  <summary>Table de Conteúdo</summary>
+  <summary>Tabela de Conteúdo</summary>
   <ol>
     <li>
       <a href="#about-the-project">Sobre o projeto</a>
@@ -60,14 +60,14 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Pre-requisitos</a></li>
+        <li><a href="#prerequisites">Pré-requisitos</a></li>
         <li><a href="#installation">Instalação</a></li>
       </ul>
     </li>
     <li><a href="#usage">Site Preview</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
+    <li><a href="#license">Licença</a></li>
+    <li><a href="#contact">Contato</a></li>
+
   </ol>
 </details>
 
@@ -128,18 +128,13 @@ This is an example of how to list things you need to use the software and how to
 Veja o Preview do Site:
 [site-status]
 <a href="https://pokemon-manager.vercel.app">
-  <img src=".github/screeshot.png" alt="Logo" width="80" height="80">
+  <img src="./.github/screeshot.png" alt="Logo" width="80" height="80">
 </a>                                                      
 https://pokemon-manager.vercel.app
 
 
 
-<!-- ROADMAP -->
-## Roadmap
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
-                                                      
-                                                      
+                                             
 <!-- LICENÇA -->
 ## Licença
                                                      
