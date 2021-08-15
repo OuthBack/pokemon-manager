@@ -74,15 +74,13 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## Sobre o projeto
-
-[![Product Name Screen Shot][product-screenshot]](https://pokemon-manager.vercel.app)
+## 📖 Sobre o projeto
 
 Um site para visualizar Pokemons.
 Proposto pela <a href="https://voltbras.com.br/">Voltbras</a> 
 
 
-### Feito com:
+### 🔋 Feito com:
 
 This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 * [React.js](https://pt-br.reactjs.org)
@@ -91,11 +89,11 @@ This section should list any major frameworks that you built your project using.
 * [ApolloGraphQL](https://www.apollographql.com)
 
 <!-- GETTING STARTED -->
-## Getting Started
+## :scroll: Getting Started
 
 Para rodar o projeto localmente siga os seguintes passos:
 
-### Pré-requisitos
+### :warning: Pré-requisitos
 
 This is an example of how to list things you need to use the software and how to install them.
 * npm
@@ -103,7 +101,7 @@ This is an example of how to list things you need to use the software and how to
   npm install npm@latest -g
   ```
 
-### Instalação
+### :gear: Instalação
 
 1. Clone o repositório
    ```sh
@@ -123,7 +121,7 @@ This is an example of how to list things you need to use the software and how to
    ```
 
 <!-- Site Preview -->
-## Site Preview
+## 🖥️ Site Preview
 [![site-status]](https://pokemon-manager.vercel.app)
 <br/>
 
@@ -135,14 +133,14 @@ https://pokemon-manager.vercel.app
 
                                              
 <!-- LICENÇA -->
-## Licença
+## :pencil: Licença
                                                      
                                                     
 Distribuido sobre a Licença MIT. Veja `LICENÇA` para mais informações.
                                                       
                                                       
 <!-- CONTACT -->
-## Contato
+## :telephone_receiver: Contato
 
 Henrique Figueiredo - riquessan@gmail.com
 
