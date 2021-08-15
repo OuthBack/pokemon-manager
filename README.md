@@ -121,7 +121,7 @@ This is an example of how to list things you need to use the software and how to
    ```
 4. Execute o projeto
    ```sh
-  npm run start
+   npm run start
    ```
    ou
    ```sh
