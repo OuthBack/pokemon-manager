@@ -120,13 +120,13 @@ This is an example of how to list things you need to use the software and how to
    REACT_APP_API="https://graphql-pokemon2.vercel.app"
    ```
 4. Execute o projeto
-  ```sh
+   ```sh
   npm run start
-  ```
-  ou
-  ```sh
+   ```
+   ou
+   ```sh
   yarn start
-  ```
+   ```
 5. O site estará abertp usando a porta 3000 em http://localhost:300
    
 <!-- Site Preview -->
