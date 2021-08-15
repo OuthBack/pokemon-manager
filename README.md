@@ -127,14 +127,6 @@ This is an example of how to list things you need to use the software and how to
    yarn start
    ```
 5. O site estará aberto usando a porta 3000 em http://localhost:3000
-6. Para testar bast rodar
-   ```sh
-   npm run test
-   ```
-   ou
-      ```sh
-   yarn test
-   ```
    
 <!-- Site Preview -->
 ## 🖥️ Site Preview
@@ -145,7 +137,16 @@ This is an example of how to list things you need to use the software and how to
 Veja o Preview do Site:
 https://pokemon-manager.vercel.app
 
-                                             
+## :dart: Teste
+Para testar basta rodar
+```sh
+npm run test
+```
+ou
+  ```sh
+yarn test
+```
+   
 <!-- LICENÇA -->
 ## :pencil: Licença
                                                      
