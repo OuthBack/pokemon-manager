@@ -76,7 +76,7 @@
 <!-- ABOUT THE PROJECT -->
 ## Sobre o projeto
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+[![Product Name Screen Shot][product-screenshot]](https://pokemon-manager.vercel.app)
 
 Um site para visualizar Pokemons.
 Proposto pela <a href="https://voltbras.com.br/">Voltbras</a> 
@@ -127,9 +127,7 @@ This is an example of how to list things you need to use the software and how to
 
 Veja o Preview do Site:
 [site-status]
-<a href="https://pokemon-manager.vercel.app">
-  <img src="./.github/screeshot.png" alt="Logo" width="80" height="80">
-</a>                                                      
+[![Product Name Screen Shot][product-screenshot]](https://pokemon-manager.vercel.app)                                          
 https://pokemon-manager.vercel.app
 
 
@@ -165,4 +163,4 @@ Link do Projeto: [https://github.com/OuthBack/pokemon-manager](https://github.co
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
 [product-screenshot]: .github/screenshot.png
-[site-status]: https://img.shields.io/website/PROTOCOL/URLREST.svg.
+[site-status]: https://img.shields.io/website
