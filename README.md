@@ -125,7 +125,7 @@ This is an example of how to list things you need to use the software and how to
    ```
    ou
    ```sh
-  yarn start
+   yarn start
    ```
 5. O site estará abertp usando a porta 3000 em http://localhost:300
    
