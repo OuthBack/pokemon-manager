@@ -17,16 +17,16 @@
 -->
 
 
-
-
-
-<!-- PROJECT LOGO -->
-<br />
-<p align="center">[![Forks][forks-shield]][forks-url]
+[![Forks][forks-shield]][forks-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
   
+
+
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
   <a href="https://github.com/OuthBack/pokemon-manager">
     <img src=".github/logo.svg" alt="Logo" width="80" height="80">
   </a>
@@ -126,9 +126,10 @@ This is an example of how to list things you need to use the software and how to
 ## Site Preview
 
 Veja o Preview do Site:
-
-<img src=".github/screeshot.png" alt="Logo" width="80" height="80">
-                                                     
+[site-status]
+<a href="https://pokemon-manager.vercel.app">
+  <img src=".github/screeshot.png" alt="Logo" width="80" height="80">
+</a>                                                      
 https://pokemon-manager.vercel.app
 
 
@@ -169,3 +170,4 @@ Link do Projeto: [https://github.com/OuthBack/pokemon-manager](https://github.co
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
 [product-screenshot]: .github/screenshot.png
+[site-status]: https://img.shields.io/website/PROTOCOL/URLREST.svg.
