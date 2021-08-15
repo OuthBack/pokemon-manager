@@ -138,7 +138,7 @@ Veja o Preview do Site:
 https://pokemon-manager.vercel.app
 
 ## :dart: Teste
-Para testar basta rodar
+Para testar a aplicação basta rodar
 ```sh
 npm run test
 ```
