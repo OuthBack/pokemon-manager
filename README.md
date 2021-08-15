@@ -82,7 +82,6 @@ Proposto pela <a href="https://voltbras.com.br/">Voltbras</a>
 
 ### 🔋 Feito com:
 
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 * [React.js](https://pt-br.reactjs.org)
 * [Jest](https://jestjs.io/pt-BR/)
 * [GraphQL](https://graphql.org)
