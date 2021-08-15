@@ -124,10 +124,11 @@ This is an example of how to list things you need to use the software and how to
 
 <!-- Site Preview -->
 ## Site Preview
+[![site-status]](https://pokemon-manager.vercel.app)
+<br/>
 
+[![Product Name Screen Shot][product-screenshot]](https://pokemon-manager.vercel.app)
 Veja o Preview do Site:
-[![site-status]]
-[![Product Name Screen Shot][product-screenshot]](https://pokemon-manager.vercel.app)                                          
 https://pokemon-manager.vercel.app
 
 
